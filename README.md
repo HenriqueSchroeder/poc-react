@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# POC React - Sistema de Gerenciamento
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proof of Concept desenvolvida com React 19, TypeScript e Vite, focada em um sistema de gerenciamento com interface moderna e componentes reutilizáveis.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19.2** - Biblioteca para construção de interfaces
+- **TypeScript** - Tipagem estática para JavaScript
+- **Vite 7** - Build tool e dev server ultrarrápido
+- **TanStack Router** - Roteamento type-safe para React
+- **Tailwind CSS 4** - Framework CSS utility-first
+- **Radix UI** - Componentes acessíveis e não estilizados
+- **Lucide React** - Ícones modernos
 
-## React Compiler
+## 📦 Componentes Principais
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **ActivityList** - Lista de atividades
+- **ClientSidebar** - Barra lateral de clientes
+- **DealHeader** - Cabeçalho de negócios
+- **HistoryList** - Lista de histórico com múltiplos tipos de itens
+- **StageProgress** - Progresso de etapas
+- **StageSidebar** - Barra lateral de etapas
+- **Componentes UI** - Accordion, Avatar, Badge, Button, Calendar, Card, Input, Select, Tabs, etc.
 
-## Expanding the ESLint configuration
+## 🛠️ Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Instalar dependências
+yarn install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Executar em modo de desenvolvimento
+yarn dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Build para produção
+yarn build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview do build
+yarn preview
+
+# Lint
+yarn lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Estrutura do Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/       # Componentes da aplicação
+│   ├── history/     # Componentes de histórico
+│   └── ui/          # Componentes UI reutilizáveis
+├── routes/          # Rotas da aplicação
+├── data/            # Dados e mocks
+└── lib/             # Utilitários e helpers
+```
+
+## 📚 Recursos
+
+- **Hot Module Replacement (HMR)** - Atualização rápida durante o desenvolvimento
+- **TypeScript** - Tipagem completa em todo o projeto
+- **TanStack Router Devtools** - Ferramentas de desenvolvimento para debug de rotas
+- **Componentes Acessíveis** - Baseados em Radix UI com suporte a ARIA
+- **Tailwind CSS** - Estilização rápida e responsiva
+
+## 📝 Licença
+
+Este projeto é uma POC (Proof of Concept) para fins de estudo e desenvolvimento.
