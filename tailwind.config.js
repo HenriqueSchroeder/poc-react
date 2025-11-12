@@ -8,4 +8,10 @@ export default {
     extend: {},
   },
   plugins: [],
+
+  safelist: [],
+
+  corePlugins: {
+    preflight: true,
+  },
 }
